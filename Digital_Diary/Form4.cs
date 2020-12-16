@@ -20,35 +20,58 @@ namespace Digital_Diary
         }
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
-        { 
+        {
             Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Events"].ConnectionString);
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Event"].ConnectionString);
             connection.Open();
-            string sql = "INSERT INTO Events(Date,Event,Importance) VALUES('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + comboBox1.Text + "')";
+            string sql = "INSERT INTO Event(Date,Event,Importance) VALUES('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + comboBox1.Text + "')";
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
+          
 
-            if (result > 0) 
+         if (result > 0)
+            {
+
                 {
                     if (textBox1.Text == "")
-                        MessageBox.Show("Your has not written any event yet!!");
+                    {
+
+                        MessageBox.Show("You have not written any event in the provided space");
+                    }
+                    else if (dateTimePicker1.Text == "")
+                    {
+
+                        MessageBox.Show("You have not set the date in the provided space");
+                    }
+                    else if (comboBox1.Text == "")
+                    {
+
+                        MessageBox.Show("You have not set your importance in the provided space");
+                    }
+                    
+                    else
+                    {
+                        MessageBox.Show("Your event is successfully created!!!");
+                    
+                    }
                 }
-              else if (dateTimePicker1.Text == "")
-                {
-                    MessageBox.Show("You have not given any date.");
-                }
-                else
-                {
-                
-                    MessageBox.Show("The event you created has been saved.");
-                }
+
             }
-        
+
+            else
+            {
+                MessageBox.Show("Error!!!.\nEvent could not be saved.\nPlease try again.");
+            }
+
+
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -56,9 +79,13 @@ namespace Digital_Diary
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-               string picPath = dlg.FileName.ToString();
+                string picPath = dlg.FileName.ToString();
                 pictureBox1.ImageLocation = picPath;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
         }
     }
 }

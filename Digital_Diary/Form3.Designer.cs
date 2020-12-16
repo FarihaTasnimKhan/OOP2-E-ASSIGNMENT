@@ -33,12 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Dltbutton2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Dltbutton2);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -50,6 +54,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HOME";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
@@ -84,6 +89,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(353, 237);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -94,6 +101,25 @@
             this.label1.Size = new System.Drawing.Size(234, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "YOUR CREATED EVENTS :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(456, 270);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 31);
+            this.textBox1.TabIndex = 4;
+            // 
+            // Dltbutton2
+            // 
+            this.Dltbutton2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Dltbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dltbutton2.Location = new System.Drawing.Point(456, 333);
+            this.Dltbutton2.Name = "Dltbutton2";
+            this.Dltbutton2.Size = new System.Drawing.Size(240, 36);
+            this.Dltbutton2.TabIndex = 5;
+            this.Dltbutton2.Text = "Delete";
+            this.Dltbutton2.UseVisualStyleBackColor = false;
+            this.Dltbutton2.Click += new System.EventHandler(this.Dltbutton2_Click);
             // 
             // Form3
             // 
@@ -120,5 +146,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Dltbutton2;
     }
 }
