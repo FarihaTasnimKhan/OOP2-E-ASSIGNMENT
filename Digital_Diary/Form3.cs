@@ -76,7 +76,7 @@ namespace Digital_Diary
                 user.Picture = reader["Picture"].ToString();
                 user.Importance = reader["Importance"].ToString();
 
-                int i;
+                
                 list.Add(user);
             }
             dataGridView1.DataSource = list;
@@ -100,6 +100,19 @@ namespace Digital_Diary
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 fm3 = new Form3();
+            fm3.Show();
+            this.Hide();
+            MessageBox.Show("Updated");
         }
     }
 }

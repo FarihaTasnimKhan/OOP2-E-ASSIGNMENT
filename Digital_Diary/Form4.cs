@@ -28,7 +28,7 @@ namespace Digital_Diary
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Event"].ConnectionString);
             connection.Open();
-            string sql = "INSERT INTO Event(Date,Event,Importance) VALUES('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + comboBox1.Text + "')";
+            string sql = "INSERT INTO Event(Date,Event,Importance) VALUES('" + dateTimePicker1.Text + "','" + textBox1.Text + "','" + comboBox1.Text + "')";
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -86,6 +86,14 @@ namespace Digital_Diary
 
         private void button3_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 fm3 = new Form3();
+
+            fm3.Show();
+            this.Hide();
         }
     }
 }
