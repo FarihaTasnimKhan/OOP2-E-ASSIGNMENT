@@ -18,7 +18,7 @@ namespace Digital_Diary
         {
             InitializeComponent();
         }
-
+          
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
