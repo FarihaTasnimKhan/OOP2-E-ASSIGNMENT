@@ -75,8 +75,8 @@ namespace Digital_Diary
                 user.Event = reader["Event"].ToString();
                 user.Picture = reader["Picture"].ToString();
                 user.Importance = reader["Importance"].ToString();
-                
 
+                int i;
                 list.Add(user);
             }
             dataGridView1.DataSource = list;
