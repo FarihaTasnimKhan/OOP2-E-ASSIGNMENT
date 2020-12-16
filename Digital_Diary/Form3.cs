@@ -67,7 +67,7 @@ namespace Digital_Diary
             SqlCommand command = new SqlCommand(sql, connection);
             SqlDataReader reader = command.ExecuteReader();
             List<Dataload> list = new List<Dataload>();
-            while (reader.Read())
+            while (reader.Read()) 
             {
                 Dataload user = new Dataload();
                 user.Id = (int)reader["Id"];
