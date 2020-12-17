@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,6 +33,37 @@ namespace Digital_Diary
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Users"].ConnectionString);
+
+            string query = "Select * from Users Where='" + NameTextBox.Text.Trim() + "' and Password= '" + PasswordTextBox.Text.Trim() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, connection);
+            DataTable dtbl = new DataTable();
+            sda.Fill(dtbl);
+            if (dtbl.Rows.Count == 1)
+            {
+                Form1 fm1 = new Form1();
+                this.Hide();
+                fm1.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Wrong name and password");
+            }
+
+
+
+            
+
+
+
+
+
+
+
 
             if (NameTextBox.Text == "")
             {
