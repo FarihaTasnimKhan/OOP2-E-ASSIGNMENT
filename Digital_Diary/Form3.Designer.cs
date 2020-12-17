@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.UpdateButton = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,9 +64,19 @@
             this.groupBox1.Text = "HOME";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(10, 366);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 40);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(456, 360);
+            this.button2.Location = new System.Drawing.Point(456, 325);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 40);
             this.button2.TabIndex = 8;
@@ -77,16 +87,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(416, 176);
+            this.label3.Location = new System.Drawing.Point(369, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(322, 75);
+            this.label3.Size = new System.Drawing.Size(398, 75);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Click from the list to choose\r\nthen choose delete or update\r\naccording to your pr" +
-    "eference.";
+            this.label3.Text = "Click from the list to choose the date\r\nthen choose delete or update\r\naccording t" +
+    "o your preference.";
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(580, 307);
+            this.UpdateButton.Location = new System.Drawing.Point(580, 283);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(116, 36);
             this.UpdateButton.TabIndex = 6;
@@ -98,7 +108,7 @@
             // 
             this.Dltbutton2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Dltbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dltbutton2.Location = new System.Drawing.Point(456, 307);
+            this.Dltbutton2.Location = new System.Drawing.Point(456, 283);
             this.Dltbutton2.Name = "Dltbutton2";
             this.Dltbutton2.Size = new System.Drawing.Size(118, 36);
             this.Dltbutton2.TabIndex = 5;
@@ -108,7 +118,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(456, 270);
+            this.textBox1.Location = new System.Drawing.Point(456, 234);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 31);
             this.textBox1.TabIndex = 4;
@@ -157,16 +167,6 @@
             this.label1.Size = new System.Drawing.Size(234, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "YOUR CREATED EVENTS :";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(10, 380);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 40);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form3
             // 
