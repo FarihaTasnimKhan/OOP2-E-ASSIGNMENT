@@ -34,15 +34,13 @@ namespace Digital_Diary
         private void button1_Click(object sender, EventArgs e)
         {
 
+            SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["Users"].ConnectionString);
+           
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE Name = '" + NameTextBox.Text + "' AND [Password] = '" + PasswordTextBox.Text + "' ", sqlcon);
+            sqlcon.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
 
-
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Users"].ConnectionString);
-
-            string query = "Select * from Users Where='" + NameTextBox.Text.Trim() + "' and Password= '" + PasswordTextBox.Text.Trim() + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(query, connection);
-            DataTable dtbl = new DataTable();
-            sda.Fill(dtbl);
-            if (dtbl.Rows.Count == 1)
+            if (reader.Read() == true)
             {
                 Form1 fm1 = new Form1();
                 this.Hide();
@@ -51,23 +49,13 @@ namespace Digital_Diary
             }
             else
             {
-                MessageBox.Show("Wrong name and password");
+                MessageBox.Show("Error!!\nWrong name and password\nPlease try again!!");
             }
-
-
-
-            
-
-
-
-
-
-
 
 
             if (NameTextBox.Text == "")
             {
-                MessageBox.Show("You have no given your name in the provided space.");
+                MessageBox.Show("You have not given your name in the provided space.");
             }
             else if (PasswordTextBox.Text == "")
             {

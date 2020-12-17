@@ -105,9 +105,9 @@ namespace Digital_Diary
         private void UpdateButton_Click(object sender, EventArgs e)
         {
 
-           /*SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Event"].ConnectionString);
+           SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Event"].ConnectionString);
             connection.Open();
-            string sql = "UPDATE Event SET Event =" + textBox1.Text + "WHERE Id = " + Id;
+            string sql = "UPDATE Event SET Event ='" + textBox1.Text + "' WHERE Id = " + Id;
             SqlCommand command = new SqlCommand(sql, connection);
             int diary = command.ExecuteNonQuery();
             connection.Close();
@@ -120,7 +120,7 @@ namespace Digital_Diary
             else
             {
                 MessageBox.Show("Error");
-            }*/
+            }
 
         }
 
