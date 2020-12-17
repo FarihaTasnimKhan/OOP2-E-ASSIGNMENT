@@ -96,18 +96,20 @@
             // 
             // UpdateButton
             // 
+            this.UpdateButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.UpdateButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.UpdateButton.Location = new System.Drawing.Point(580, 283);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(116, 36);
             this.UpdateButton.TabIndex = 6;
             this.UpdateButton.Text = "Update";
-            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.UseVisualStyleBackColor = false;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // Dltbutton2
             // 
             this.Dltbutton2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Dltbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dltbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dltbutton2.Location = new System.Drawing.Point(456, 283);
             this.Dltbutton2.Name = "Dltbutton2";
             this.Dltbutton2.Size = new System.Drawing.Size(118, 36);
