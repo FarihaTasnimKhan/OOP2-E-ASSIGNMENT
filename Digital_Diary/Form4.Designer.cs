@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CREATE AND MODIFY EVENTS";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 338);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(393, 40);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "To see your list of events or to delete or update \r\nPress back";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(496, 343);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 35);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Back";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox1
             // 
@@ -121,9 +140,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(124, 48);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2020, 12, 23, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(295, 26);
             this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 12, 18, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -161,25 +182,6 @@
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create event";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(496, 343);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 35);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Back";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 338);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(393, 40);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "To see your list of events or to delete or update \r\nPress back";
             // 
             // Form4
             // 
