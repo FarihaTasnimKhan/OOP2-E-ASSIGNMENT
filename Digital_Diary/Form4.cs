@@ -95,5 +95,7 @@ namespace Digital_Diary
             fm3.Show();
             this.Hide();
         }
+
+     
     }
 }

@@ -51,7 +51,7 @@ namespace Digital_Diary
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
