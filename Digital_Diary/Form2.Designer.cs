@@ -156,9 +156,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(152, 232);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2020, 12, 23, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(306, 26);
             this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 12, 18, 0, 0, 0, 0);
             // 
             // DateOfBirthLabel
             // 
