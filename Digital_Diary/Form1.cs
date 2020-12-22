@@ -42,14 +42,14 @@ namespace Digital_Diary
 
             if (reader.Read() == true)
             {
-                Form1 fm1 = new Form1();
-                this.Hide();
-                fm1.Show();
+                
+                MessageBox.Show("Logged in successfully.");
 
             }
             else
             {
                 MessageBox.Show("Error!!\nWrong name and password\nPlease try again!!");
+
             }
 
 
