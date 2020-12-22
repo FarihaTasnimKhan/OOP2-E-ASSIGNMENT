@@ -87,9 +87,9 @@ namespace Digital_Diary
             connection.Open();
             string sql = "DELETE FROM Event WHERE Id=" + Id;
             SqlCommand command = new SqlCommand(sql, connection);
-            int diary = command.ExecuteNonQuery();
+            int result = command.ExecuteNonQuery();
             connection.Close();
-            if (diary > 0)
+            if (result > 0)
             {
                 MessageBox.Show("Diary Deleted");
 
@@ -109,9 +109,9 @@ namespace Digital_Diary
             string sql = "UPDATE Event SET Event ='" + textBox1.Text + "' WHERE Id = " + Id;
            
             SqlCommand command = new SqlCommand(sql, connection);
-            int diary = command.ExecuteNonQuery();
+            int result = command.ExecuteNonQuery();
             connection.Close();
-            if (diary > 0)
+            if (result > 0)
             {
                 MessageBox.Show("Diary Updated");
 
