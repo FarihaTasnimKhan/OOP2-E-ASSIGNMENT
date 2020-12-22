@@ -22,14 +22,14 @@ namespace Digital_Diary
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Users"].ConnectionString);
+          /*  SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Users"].ConnectionString);
             connection.Open();
 
             SqlDataAdapter sq = new SqlDataAdapter("SELECT * FROM Event", connection);
             DataTable dt = new DataTable();
             sq.Fill(dt);
 
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt;*/
 
         }
 
