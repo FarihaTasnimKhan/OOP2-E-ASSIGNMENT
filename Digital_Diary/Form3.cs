@@ -25,7 +25,6 @@ namespace Digital_Diary
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Users"].ConnectionString);
             connection.Open();
 
-
             SqlDataAdapter sq = new SqlDataAdapter("SELECT * FROM Event", connection);
             DataTable dt = new DataTable();
             sq.Fill(dt);
