@@ -42,18 +42,14 @@ namespace Digital_Diary
 
             if (reader.Read() == true)
             {
-                
-                MessageBox.Show("Logged in successfully.");
-
+                Form1 fm1 = new Form1();
+                MessageBox.Show("Logged in successfully");
+                Form3 fm3 = new Form3();
+                fm3.Show();
+                this.Hide();
+               
             }
-            else
-            {
-                MessageBox.Show("Error!!\nWrong name and password\nPlease try again!!");
-
-            }
-
-
-            if (NameTextBox.Text == "")
+            else if (NameTextBox.Text == "")
             {
                 MessageBox.Show("You have not given your name in the provided space.");
             }
@@ -65,12 +61,18 @@ namespace Digital_Diary
             {
                 MessageBox.Show("Error!!!\nThe passwords do not match!!");
             }
+           
             else
             {
-                Form3 fm3 = new Form3();
-                fm3.Show();
+                MessageBox.Show("Error!!\nWrong name and password\nPlease try again!!");
+                Form1 fm1 = new Form1();
+                fm1.Show();
                 this.Hide();
+
             }
+
+
+          
         }
     }
 }
