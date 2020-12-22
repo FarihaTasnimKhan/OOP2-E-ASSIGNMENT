@@ -39,12 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label3);
@@ -66,7 +68,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(10, 366);
+            this.button3.Location = new System.Drawing.Point(186, 376);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 40);
             this.button3.TabIndex = 9;
@@ -89,10 +91,10 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(369, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(398, 75);
+            this.label3.Size = new System.Drawing.Size(410, 75);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Click from the list to choose the date\r\nthen choose delete or update\r\naccording t" +
-    "o your preference.";
+            this.label3.Text = "Click from the list to choose the event\r\nand then choose delete or update\r\naccord" +
+    "ing to your preference.";
             // 
             // UpdateButton
             // 
@@ -133,7 +135,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 36);
             this.button1.TabIndex = 3;
-            this.button1.Text = "CREATE AND MODIFY";
+            this.button1.Text = "CREATE ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -158,7 +160,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(353, 237);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-           
             // 
             // label1
             // 
@@ -169,6 +170,15 @@
             this.label1.Size = new System.Drawing.Size(234, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "YOUR CREATED EVENTS :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 382);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(169, 29);
+            this.textBox2.TabIndex = 10;
+            this.textBox2.Text = "Press Exit to exit.";
             // 
             // Form3
             // 
@@ -201,5 +211,6 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
