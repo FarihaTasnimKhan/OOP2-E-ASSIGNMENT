@@ -88,6 +88,9 @@ namespace Digital_Diary
             else
             {
                 MessageBox.Show("Error!!!\nYour sign up was not successful.\nPlease try again.");
+                Form2 fm2 = new Form2();
+                fm2.Show();
+                this.Hide();
             }
 
         }
